@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🌟</title>
+    <style>
+        /* --- MAGICAL NIGHT THEME --- */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+        :root {
+            --gold: #ffd700;
+            --dark: #1a1a2e;
+            --purple: #6c5ce7;
+            --pink: #fd79a8;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Starry Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(2px 2px at 20px 30px, white, transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+                radial-gradient(1px 1px at 90px 40px, white, transparent),
+                radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.9), transparent),
+                radial-gradient(1px 1px at 160px 120px, white, transparent);
+            background-size: 200px 200px;
+            animation: twinkle 4s infinite;
+            z-index: -1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, transparent 0%, rgba(108,92,231,0.3) 100%);
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            color: var(--gold);
+            text-shadow: 0 0 20px var(--gold), 0 0 40px var(--pink);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px var(--gold), 0 0 40px var(--pink); }
+            to { text-shadow: 0 0 30px var(--gold), 0 0 60px var(--gold), 0 0 80px var(--pink); }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin: 20px 0;
+            padding: 15px 40px;
+            border: 2px solid var(--gold);
+            border-radius: 50px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .subtitle span {
+            display: block;
+            font-size: 1rem;
+            color: var(--pink);
+            margin-top: 10px;
+        }
+
+        /* Magic Button */
+        .magic-btn {
+            margin-top: 40px;
+            padding: 18px 50px;
+            font-size: 1.4rem;
+            background: linear-gradient(45deg, var(--purple), var(--pink));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            box-shadow: 0 0 20px var(--purple);
+            transition: all 0.3s;
+        }
+
+        .magic-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px var(--pink);
+        }
+
+        /* Photo Section */
+        .photo-section {
+            padding: 60px 20px;
+            max-width: 450px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .photo-frame {
+            background: linear-gradient(45deg, var(--purple), var(--pink));
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Wishes Section */
+        .wishes {
+            padding: 60px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .wish-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .wish-card h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .wish-card ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .wish-card li {
+            font-size: 1.2rem;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.2);
+        }
+
+        .wish-card li:before {
+            content: "✨ ";
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .footer- emojis {
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Starry Background -->
+    <div class="stars"></div>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Happy Birthday! ✨</h1>
+        <div class="subtitle">
+            🎉 Celebrity Status Achieved! 🎉
+            <span>✨ You're a STAR now! 🌟</span>
+        </div>
+        <button class="magic-btn" id="makeWish">🌟 Make A Wish! 🌟</button>
+    </header>
+
+    <!-- PHOTO -->
+    <section class="photo-section">
+        <div class="photo-frame">
+            <img src="./Screenshot 2026-03-19 233405R.png" alt="Birthday Star">
+        </div>
+    </section>
+
+    <!-- WISHES -->
+    <section class="wishes">
+        <div class="wish-card">
+            <h3>🌈 Your Magic Wishes</h3>
+            <ul>
+                <li>Endless HAPPINESS (not the sad kind) 😄</li>
+                <li>∞ MONEY (so you can buy ALL the cake) 💰</li>
+                <li>STRONG WiFi (never buffering again) 📶</li>
+                <li>UNLIMITED pizza (carbs are temporary, pizza is forever) 🍕</li>
+                <li>Perfect HAIR days (every single one) 💇</li>
+            </ul>
+        </div>
+
+        <div class="wish-card">
+            <h3>🎭 Age Milestones</h3>
+            <p>🎂 Another year older, another year WISER!</p>
+            <p>🤫 Secret tip: Don't tell anyone your real age...</p>
+            <p>...or DO, because age is just a NUMBER! 📊</p>
+            <p>💃 You're like a fine WINE - getting better with age! 🍷</p>
+        </div>
+    </section>
+
+    <!-- FINAL MESSAGE -->
+    <div class="wish-card" style="text-align: center;">
+        <h3>💖 Final Words 💖</h3>
+        <p style="font-size: 1.3rem;">
+            You're amazing, you're awesome, you're incredible!<br>
+            You're fantastic, you're wonderful, you'reirable!<br>
+            (I ran out of words that rhyme 😅)<br><br>
+            <strong>JUST BE HAPPY TODAY! 🎉</strong>
+        </p>
+    </div>
+
+    <footer>
+        <p>Made with 💖 + ✨ Magic ✨ + 🍕 Pizza</p>
+        <div class="footer-emojis">🌟⭐💫✨🌙💖🎉</div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementById('makeWish').addEventListener('click', () => {
+            
+            // 🌟 Starry Confetti!
+            var count = 250;
+            var defaults = { origin: { y: 0.5 } };
+
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            fire(0.3, { spread: 60, startVelocity: 50, colors: ['#ffd700', '#6c5ce7', '#fd79a8'] });
+            fire(0.2, { spread: 100 });
+            fire(0.3, { spread: 150, decay: 0.9, scalar: 1.5 });
+            fire(0.15, { spread: 180, startVelocity: 40, decay: 0.9 });
+            fire(0.1, { spread: 200, startVelocity: 70, decay: 0.92 });
+
+            // Change button
+            const btn = document.getElementById('makeWish');
+            btn.innerHTML = "🎆 YOU'RE A STAR! 🎆";
+            btn.style.background = "linear-gradient(45deg, #ffd700, #ff6b81)";
+
+            // Play sound (uncomment below)
+            // new Audio('birthday-song.mp3').play();
+
+            // Magic alert!
+            setTimeout(() => {
+                alert("🌟✨ HAPPY BIRTHDAY superstar!!! ✨🌟\n\nMay your day be as magical as YOU are! 💖");
+            }, 600);
+        });
+    </script>
+</body>
+</html>
